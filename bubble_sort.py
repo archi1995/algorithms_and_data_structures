@@ -9,7 +9,8 @@ def is_unordered(list_, index):
 def bubble_sort(unsorted):
     sorting = True
     for iteration in range(len(unsorted)):
-        for elem in range(len(unsorted) - iteration - 1):
+        lasted_range = range(len(unsorted) - iteration - 1)
+        for elem in lasted_range:
             if is_unordered(unsorted, elem):
                 swap(unsorted, elem)
             else:
@@ -19,6 +20,6 @@ def bubble_sort(unsorted):
 
 
 if __name__ == '__main__':
-    unsorted = [3, 2, 1]
+    unsorted = [5, 4, 3, 2, 1]
     bubble_sort(unsorted)
     print(unsorted)
